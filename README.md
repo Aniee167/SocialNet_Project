@@ -15,6 +15,15 @@ A social network web application project for Computer Security course.
 - **UI**: Simple responsive UI using CSS.
 - **Profile Management**: Users can edit their descriptions.
 
+## Page Logic & Behavior
+- **Admin (`/admin/newuser.php`)**: Provides a form to create new users. Passwords are securely hashed using `password_hash()` before being stored in the database.
+- **SignIn (`/socialnet/signin.php`)**: Authenticates users by comparing the provided password with the stored hash using `password_verify()`. On success, it initializes a session.
+- **Home (`/socialnet/index.php`)**: Checks for an active session. If unauthorized, it redirects to the Signin page. It fetches the current user's info and lists all other users from the database.
+- **Setting (`/socialnet/setting.php`)**: Allows users to update their `description` field in the `account` table.
+- **Profile (`/socialnet/profile.php`)**: Uses the `?owner=` query parameter to display a specific user's profile. If the parameter is missing, it defaults to the currently logged-in user.
+- **About (`/socialnet/about.php`)**: Displays static student information.
+- **SignOut (`/socialnet/signout.php`)**: Terminates the session, clears session cookies, and redirects the user back to the login page.
+
 ## Default Credentials (for testing)
 - **Username**: `admin`
 - **Password**: `admin123`
