@@ -15,6 +15,10 @@ A social network web application project for Computer Security course.
 - **UI**: Simple responsive UI using CSS.
 - **Profile Management**: Users can edit their descriptions.
 
+## Default Credentials (for testing)
+- **Username**: `admin`
+- **Password**: `admin123`
+
 ## Setup Instructions
 
 1. **Import Database**:
